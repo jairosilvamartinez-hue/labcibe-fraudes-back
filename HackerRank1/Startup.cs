@@ -39,6 +39,7 @@ namespace LibraryService.WebAPI
 
             services.AddSingleton(jwtSettings);
             services.AddScoped<IAuthenticationService, AuthenticationService>();
+            services.AddScoped<IFraudService, FraudService>();
 
             // 3. Configurar Authenticacion
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
